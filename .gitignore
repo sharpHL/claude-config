@@ -1,0 +1,69 @@
+# ═══════════════════════════════════════════════════
+# Claude Code Configuration - .gitignore
+# ═══════════════════════════════════════════════════
+
+# CRITICAL: Never commit sensitive or personal data
+# Only track: CLAUDE.md, settings.json, custom commands/hooks
+
+# ═══════════════════════════════════════════════════
+# Sensitive Data - NEVER COMMIT
+# ═══════════════════════════════════════════════════
+
+# Chat history and debug logs
+history.jsonl
+debug/
+file-history/
+
+# Project-specific data
+projects/
+
+# Task and shell data
+todos/
+shell-snapshots/
+
+# Analytics and stats
+statsig/
+
+# ═══════════════════════════════════════════════════
+# Backup and Temporary Files
+# ═══════════════════════════════════════════════════
+
+*.bak
+*.sq
+*.tmp
+*.log
+
+# ═══════════════════════════════════════════════════
+# System Files
+# ═══════════════════════════════════════════════════
+
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# ═══════════════════════════════════════════════════
+# IDE and Editor
+# ═══════════════════════════════════════════════════
+
+.vscode/
+.idea/
+*.sublime-*
+
+# ═══════════════════════════════════════════════════
+# Plugin Data (may contain sensitive info)
+# ═══════════════════════════════════════════════════
+
+plugins/
+ide/
+
+# ═══════════════════════════════════════════════════
+# Files to Track (Explicitly Allowed)
+# ═══════════════════════════════════════════════════
+
+# Uncomment these if you want to be explicit:
+# !CLAUDE.md
+# !settings.json
+# !commands/**/*.md
+# !hooks/**/*.sh
+# !README.md
