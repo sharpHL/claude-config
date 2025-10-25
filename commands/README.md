@@ -8,17 +8,24 @@ This directory contains custom slash commands for Claude Code.
 
 Complete Git Flow workflow automation commands:
 
-- `/feature <name>` - Create feature branches from develop
-- `/release <version>` - Create release branches with versioning
-- `/hotfix <name>` - Create emergency hotfix branches from main
-- `/finish` - Complete and merge Git Flow branches
-- `/flow-status` - Display comprehensive Git Flow status
+**Core Workflow Commands:**
+- `/git:feature <name>` - Create feature branches from develop
+- `/git:release <version>` - Create release branches with versioning
+- `/git:hotfix <name>` - Create emergency hotfix branches from main
+- `/git:finish` - Complete and merge Git Flow branches
+- `/git:flow-status` - Display comprehensive Git Flow status
+
+**Utility Commands:**
+- `/git:branch <description> [--type=feature|release|hotfix] [--project=name]` - Generate compliant branch names
 
 **Usage Example:**
 ```bash
-/feature user-authentication
-/finish
-/flow-status
+/git:branch "user authentication system" --type=feature --project=ecommerce
+# Suggests: feature/ecommerce-user-authentication-system
+
+/git:feature user-authentication
+/git:finish
+/git:flow-status
 ```
 
 ## 📋 Attribution

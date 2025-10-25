@@ -41,11 +41,11 @@ This applies to:
 This project follows Git Flow branching model with automated commands.
 
 **Core Commands:**
-- `/feature <name>` - Create feature branch from develop
-- `/release <version>` - Create release branch from develop
-- `/hotfix <name>` - Create hotfix branch from main
-- `/finish` - Complete and merge current branch
-- `/flow-status` - Check repository status
+- `/git:feature <name>` - Create feature branch from develop
+- `/git:release <version>` - Create release branch from develop
+- `/git:hotfix <name>` - Create hotfix branch from main
+- `/git:finish` - Complete and merge current branch
+- `/git:flow-status` - Check repository status
 
 **Branch Structure:**
 - `main` - Production-ready code (protected)
@@ -55,10 +55,10 @@ This project follows Git Flow branching model with automated commands.
 - `hotfix/*` - Emergency fixes → merge to `main` + `develop`
 
 **Workflow:**
-1. Use `/feature user-auth` to start development
+1. Use `/git:feature user-auth` to start development
 2. Commit with conventional format: `feat: add login`
-3. Use `/finish` to merge back automatically
-4. Check status anytime with `/flow-status`
+3. Use `/git:finish` to merge back automatically
+4. Check status anytime with `/git:flow-status`
 
 **Key Rules:**
 - Branch names use kebab-case: `feature/payment-gateway`

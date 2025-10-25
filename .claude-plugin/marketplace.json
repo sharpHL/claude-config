@@ -39,7 +39,8 @@
         "./commands/git/release.md",
         "./commands/git/hotfix.md",
         "./commands/git/finish.md",
-        "./commands/git/flow-status.md"
+        "./commands/git/flow-status.md",
+        "./commands/git/branch.md"
       ],
       "agents": [
         "./agents/data-ai/quant-analyst.md",
