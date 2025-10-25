@@ -2,6 +2,10 @@
 
 Add your specialized agents here.
 
+## Attribution
+
+The agents in this directory are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. These templates provide expert agents for various domains and workflows.
+
 ## How to Create an Agent
 
 1. Create a new `.md` file in this directory
