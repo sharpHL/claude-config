@@ -24,7 +24,7 @@ Install the plugin using Claude Code's plugin system:
 /plugin add-marketplace https://github.com/sharpHL/claude-config
 
 # Install the toolkit
-/plugin install cc-toolkit
+/plugin install claude-config
 ```
 
 ### Local Development/Testing
@@ -34,20 +34,20 @@ For local testing or customization:
 ```bash
 # Clone the repository
 git clone https://github.com/sharpHL/claude-config.git
-cd cc-toolkit
+cd claude-config
 
 # Add as local marketplace in Claude Code settings.json
 {
   "pluginMarketplaces": [
     {
       "name": "local",
-      "url": "file:///path/to/cc-toolkit/parent"
+      "url": "file:///path/to/claude-config/parent"
     }
   ]
 }
 
 # Install from local marketplace
-/plugin install cc-toolkit@local
+/plugin install claude-config@local
 ```
 
 ## 📦 What's Included
@@ -118,7 +118,7 @@ Claude Code will automatically suggest relevant agents, or you can explicitly re
 ### Applying Templates
 Copy templates to your project:
 ```bash
-cp ~/.claude/plugins/cc-toolkit/templates/CLAUDE.md ./.claude/
+cp ~/.claude/plugins/claude-config/templates/CLAUDE.md ./.claude/
 ```
 
 ## 🛠️ Customization
@@ -156,7 +156,7 @@ Agent instructions and behavior...
 ## 📂 Repository Structure
 
 ```
-cc-toolkit/
+claude-config/
 ├── .claude-plugin/
 │   └── plugin.json          # Plugin manifest
 ├── commands/                # Slash commands
