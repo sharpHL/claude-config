@@ -1,0 +1,41 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"],
+      "description": "Context7 MCP server for enhanced context management and retrieval",
+      "type": "npm_package",
+      "package": "@context7/mcp-server",
+      "transport": "stdio"
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp"],
+      "description": "Chrome DevTools MCP server for browser automation, debugging, and web scraping",
+      "type": "npm_package",
+      "package": "chrome-devtools-mcp",
+      "transport": "stdio"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Sequential Thinking MCP server for structured reasoning and step-by-step problem solving",
+      "type": "npm_package",
+      "package": "@modelcontextprotocol/server-sequential-thinking",
+      "transport": "stdio"
+    }
+  },
+  "marketplace_ready": true,
+  "auto_install": true,
+  "user_action_required": false,
+  "package_dependencies": [
+    "@context7/mcp-server",
+    "chrome-devtools-mcp",
+    "@modelcontextprotocol/server-sequential-thinking"
+  ],
+  "notes": {
+    "installation": "MCP servers are automatically configured via npm packages",
+    "usage": "No manual claude mcp add commands required",
+    "compatibility": "Works with Claude Code's built-in MCP server detection"
+  }
+}

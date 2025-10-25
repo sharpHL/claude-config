@@ -64,6 +64,14 @@ cd claude-config
 - **Templates** - Ready for language-specific configurations
 - **Extensions** - Add your own commands and agents
 
+### 🔧 **Integrated MCP Servers**
+Model Context Protocol servers for enhanced capabilities:
+- **Context7** - Enhanced context management and retrieval
+- **Chrome DevTools** - Browser automation and debugging
+- **Sequential Thinking** - Structured reasoning and analysis
+
+*Automatically configured via npm packages - no manual setup required*
+
 ### Slash Commands (`/commands`)
 Custom commands for streamlined workflows:
 
@@ -182,6 +190,9 @@ Agent instructions and behavior...
 claude-config/
 ├── .claude-plugin/
 │   └── marketplace.json    # Plugin manifest
+├── mcp-servers/            # 🔧 MCP server configurations
+│   ├── .mcp.json         # MCP server setup
+│   └── README.md          # MCP installation guide
 ├── commands/                # ✅ Slash commands (Git Flow)
 ├── agents/                  # ✅ Specialized agents (18 total)
 │   ├── data-ai/            # Data & AI specialists

@@ -6,7 +6,7 @@
     "url": "https://github.com/sharpHL"
   },
   "metadata": {
-    "description": "Comprehensive Claude Code toolkit with specialized agents, Git Flow commands, and development utilities",
+    "description": "Comprehensive Claude Code toolkit with specialized agents, Git Flow commands, MCP integration, and development utilities",
     "version": "1.0.0"
   },
   "plugins": [
@@ -31,7 +31,13 @@
         "programming-languages",
         "ai-engineering",
         "development-workflow",
-        "extensible-toolkit"
+        "extensible-toolkit",
+        "mcp",
+        "context7",
+        "chrome-devtools",
+        "sequential-thinking",
+        "browser-automation",
+        "context-management"
       ],
       "strict": false,
       "commands": [
@@ -63,7 +69,47 @@
       ],
       "templates": [
         "./templates/CLAUDE.md"
-      ]
+      ],
+      "mcp": {
+        "type": "integrated_enhancement",
+        "description": "Integrated MCP servers for enhanced capabilities",
+        "config": "./mcp-servers/.mcp.json",
+        "auto_install": true,
+        "user_installation_required": false,
+        "package_based": true,
+        "servers": {
+          "context7": {
+            "name": "Context7",
+            "description": "Enhanced context management and information retrieval",
+            "package": "@context7/mcp-server",
+            "transport": "stdio",
+            "auto_configure": true,
+            "enhances": ["context awareness", "information retrieval"]
+          },
+          "chrome-devtools": {
+            "name": "Chrome DevTools",
+            "description": "Browser automation, debugging, and web scraping",
+            "package": "chrome-devtools-mcp",
+            "transport": "stdio",
+            "auto_configure": true,
+            "enhances": ["browser automation", "web debugging", "scraping"]
+          },
+          "sequential-thinking": {
+            "name": "Sequential Thinking",
+            "description": "Structured reasoning and step-by-step problem solving",
+            "package": "@modelcontextprotocol/server-sequential-thinking",
+            "transport": "stdio",
+            "auto_configure": true,
+            "enhances": ["structured reasoning", "problem decomposition"]
+          }
+        },
+        "installation_notes": [
+          "MCP servers are automatically configured via npm packages",
+          "No manual claude mcp add commands required",
+          "Packages are installed and configured automatically",
+          "Compatible with Claude Code's built-in MCP server detection"
+        ]
+      }
     }
   ]
 }
