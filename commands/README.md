@@ -4,7 +4,7 @@ This directory contains custom slash commands for Claude Code.
 
 ## 🚀 Available Commands
 
-### Git Flow Commands (`git/`)
+### Included: Git Flow Commands (`git/`)
 
 Complete Git Flow workflow automation commands:
 
@@ -27,7 +27,10 @@ Complete Git Flow workflow automation commands:
 
 ## ➕ Adding Your Own Commands
 
-### Command Structure
+### Create Custom Commands
+Add your own commands to extend the toolkit:
+
+#### Command Structure
 Create a new `.md` file in this directory:
 
 ```markdown

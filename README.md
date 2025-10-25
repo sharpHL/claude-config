@@ -58,11 +58,11 @@ cd claude-config
 - **Project Template** - Comprehensive CLAUDE.md with development best practices
 - **Documentation** - Best practices, tips, and examples
 
-### 🚧 **Coming Soon**
-- **Skills** - Modular capabilities for specific tasks
-- **Hooks** - Automation for repetitive workflows
-- **More Templates** - Language-specific configurations
-- **Extended Commands** - Beyond Git Flow workflows
+### 🚧 **Framework Ready**
+- **Skills** - Framework for modular capabilities
+- **Hooks** - Framework for automation workflows
+- **Templates** - Ready for language-specific configurations
+- **Extensions** - Add your own commands and agents
 
 ### Slash Commands (`/commands`)
 Custom commands for streamlined workflows:
@@ -71,15 +71,23 @@ Custom commands for streamlined workflows:
 - Complete branching workflow automation
 - See `/commands/README.md` for detailed usage and attribution
 
-*(Add your own commands!)*
+**Custom Commands**:
+- Add your own commands to extend functionality
+- See `/commands/README.md` for creation guide
 
 ### Agents (`/agents`)
 Specialized sub-agents for focused tasks:
 
+**Included Agents**:
 - **18 Expert Agents** across 3 categories
 - **Data & AI**: Quant analysis, AI engineering, data science
 - **Podcast Creation**: Research, production, marketing team
 - **Programming**: Python, TypeScript, Shell scripting experts
+
+**Custom Agents**:
+- Create your own specialized agents
+- Extend with domain-specific expertise
+- See `/agents/README.md` for complete list and creation guide
 
 *See `/agents/README.md` for complete list and attribution*
 

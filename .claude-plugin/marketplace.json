@@ -6,14 +6,14 @@
     "url": "https://github.com/sharpHL"
   },
   "metadata": {
-    "description": "Curated collection of Claude Code plugins, commands, and best practices",
+    "description": "Comprehensive Claude Code toolkit with specialized agents, Git Flow commands, and development utilities",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "claude-config",
       "source": "./",
-      "description": "Comprehensive toolkit with Git Flow commands, agents, and development utilities",
+      "description": "Extensible toolkit with 18 specialized agents, Git Flow commands, and development workflows",
       "version": "1.0.0",
       "author": {
         "name": "sharp.L"
@@ -22,12 +22,16 @@
       "homepage": "https://github.com/sharpHL/claude-config#readme",
       "license": "MIT",
       "keywords": [
+        "agents",
         "productivity",
         "git-flow",
-        "templates",
-        "best-practices",
-        "utilities",
-        "automation"
+        "automation",
+        "data-science",
+        "podcast-creation",
+        "programming-languages",
+        "ai-engineering",
+        "development-workflow",
+        "extensible-toolkit"
       ],
       "strict": false,
       "commands": [
@@ -36,6 +40,28 @@
         "./commands/git/hotfix.md",
         "./commands/git/finish.md",
         "./commands/git/flow-status.md"
+      ],
+      "agents": [
+        "./agents/data-ai/quant-analyst.md",
+        "./agents/data-ai/ai-engineer.md",
+        "./agents/data-ai/data-scientist.md",
+        "./agents/podcast-creator-team/comprehensive-researcher.md",
+        "./agents/podcast-creator-team/episode-orchestrator.md",
+        "./agents/podcast-creator-team/social-media-copywriter.md",
+        "./agents/podcast-creator-team/market-research-analyst.md",
+        "./agents/podcast-creator-team/podcast-trend-scout.md",
+        "./agents/podcast-creator-team/seo-podcast-optimizer.md",
+        "./agents/podcast-creator-team/academic-research-synthesizer.md",
+        "./agents/podcast-creator-team/guest-outreach-coordinator.md",
+        "./agents/podcast-creator-team/twitter-ai-influencer-manager.md",
+        "./agents/podcast-creator-team/project-supervisor-orchestrator.md",
+        "./agents/podcast-creator-team/podcast-editor.md",
+        "./agents/programming-languages/python-pro.md",
+        "./agents/programming-languages/typescript-pro.md",
+        "./agents/programming-languages/shell-scripting-pro.md"
+      ],
+      "templates": [
+        "./templates/CLAUDE.md"
       ]
     }
   ]

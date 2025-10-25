@@ -38,85 +38,67 @@ This applies to:
 
 ## 🔄 Git Workflow
 
-### Git Flow Strategy
-This project follows the Git Flow branching model with the following structure:
+This project follows Git Flow branching model with automated commands.
 
-**Main Branches:**
-- `main` - Production-ready code (protected, tagged releases)
-- `develop` - Integration branch for features (protected)
+**Core Commands:**
+- `/feature <name>` - Create feature branch from develop
+- `/release <version>` - Create release branch from develop
+- `/hotfix <name>` - Create hotfix branch from main
+- `/finish` - Complete and merge current branch
+- `/flow-status` - Check repository status
 
-**Supporting Branches:**
-- `feature/*` - New features and enhancements
-  - Branch from: `develop`
-  - Merge back to: `develop`
-  - Naming: `feature/<descriptive-name>` (kebab-case)
-  - Examples: `feature/user-authentication`, `feature/payment-gateway`
+**Branch Structure:**
+- `main` - Production-ready code (protected)
+- `develop` - Integration branch (protected)
+- `feature/*` - New features → merge to `develop`
+- `release/*` - Release prep → merge to `main` + `develop`
+- `hotfix/*` - Emergency fixes → merge to `main` + `develop`
 
-- `release/*` - Release preparation
-  - Branch from: `develop`
-  - Merge to: `main` AND `develop`
-  - Naming: `release/<version>` (e.g., `release/v1.2.0`)
-  - Creates version tag on `main`
+**Workflow:**
+1. Use `/feature user-auth` to start development
+2. Commit with conventional format: `feat: add login`
+3. Use `/finish` to merge back automatically
+4. Check status anytime with `/flow-status`
 
-- `hotfix/*` - Emergency production fixes
-  - Branch from: `main`
-  - Merge to: `main` AND `develop`
-  - Naming: `hotfix/<descriptive-name>` (kebab-case)
-  - Examples: `hotfix/critical-security-patch`, `hotfix/payment-failure`
-  - Creates patch version tag (e.g., v1.2.0 → v1.2.1)
-
-**Available Commands:**
-- `/git/feature <name>` - Create new feature branch from develop
-- `/git/release <version>` - Create new release branch from develop
-- `/git/hotfix <name>` - Create emergency hotfix branch from main
-- `/git/finish` - Complete and merge current Git Flow branch
-- `/git/flow-status` - Display comprehensive Git Flow status
-
-**Commit Message Format:**
-Use conventional commits format:
-- `feat:` - New features
-- `fix:` - Bug fixes
-- `docs:` - Documentation changes
-- `refactor:` - Code refactoring
-- `test:` - Test additions/changes
-- `chore:` - Maintenance tasks
-- `perf:` - Performance improvements
-
-**Branch Naming Rules:**
-- Use kebab-case (lowercase-with-hyphens)
-- Be descriptive and concise
-- Avoid generic names like `feature1`, `fix`, `update`
-- ✅ Good: `feature/user-profile-page`, `hotfix/auth-bypass-fix`
-- ❌ Bad: `feat1`, `My_Feature`, `fix`
-
-**Workflow Best Practices:**
-- Keep feature branches short-lived and focused
-- Push to remote regularly to avoid conflicts
-- Run tests before finishing branches
-- Never commit directly to `main` or `develop`
-- Update CHANGELOG.md for releases
-- Create tags for all releases and hotfixes
-- Use `/git/finish` command for proper merge and cleanup
+**Key Rules:**
+- Branch names use kebab-case: `feature/payment-gateway`
+- Never commit directly to `main`/`develop`
+- Keep branches focused and short-lived
+- Test before finishing branches
 
 ## 🧪 Testing
-- Write tests for all new features
-- Maintain minimum 80% test coverage
+- Write tests for new features (minimum 80% coverage)
 - Use `pytest` for Python projects
-- Run full test suite before committing changes
-- Include both unit and integration tests where appropriate
+- Run full test suite before committing
+- Include both unit and integration tests
 
 ## 📚 Documentation
-- Add docstrings to all public functions and classes
-- Keep `README.md` updated with:
-  - Setup and installation instructions
-  - Usage examples
-  - Project overview and architecture
-- Document API endpoints with request/response examples
-- Focus on explaining the "why" behind decisions, not just the "what"
+- Add docstrings to public functions and classes
+- Keep READMEs updated with setup, usage, and architecture
+- Focus on "why" behind decisions, not just "what"
+- Maintain attribution for template-based content
 
 ## 💬 Response Style
-- **Conciseness**: Be direct and to the point
+- **Concise**: Direct and to the point
 - **Examples**: Show code examples when explaining concepts
-- **Context**: Provide reasoning and context for technical decisions
-- **Clarity**: Ask clarifying questions when requirements are ambiguous
-- **Actionability**: Provide actionable next steps
+- **Context**: Provide reasoning for technical decisions
+- **Clarity**: Ask clarifying questions when needed
+- **Actionable**: Provide next steps
+
+## 🔄 Project Maintenance
+
+### Adding New Content
+1. **Create** files in appropriate directories (`agents/`, `commands/`, `skills/`, `hooks/`, `templates/`)
+2. **Update** `.claude-plugin/marketplace.json` with new entries
+3. **Update** relevant README files with attribution
+4. **Commit** using conventional format: `type(scope): description`
+
+**Commit Examples:**
+- `feat(agents): add react-development specialist`
+- `fix(commands): resolve git flow parameter handling`
+- `docs(readme): update installation instructions`
+
+**Important:**
+- ❌ No Claude Code co-author signatures
+- ✅ Maintain attribution for template-derived content
+- ✅ Respect MIT License requirements

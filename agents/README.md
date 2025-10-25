@@ -4,7 +4,9 @@ Specialized agents for focused tasks and domain-specific expertise.
 
 ## 🚀 Available Agents
 
-### 📊 Data & AI Agents (`data-ai/`)
+### Included Agents
+
+#### 📊 Data & AI Agents (`data-ai/`)
 
 - **`quant-analyst`** - Quantitative finance and algorithmic trading specialist
   - Trading strategy development and backtesting
@@ -57,9 +59,15 @@ Specialized agents for focused tasks and domain-specific expertise.
   - System administration automation
   - DevOps pipeline scripting
 
+### ➕ Create Your Own Agents
+
+Add custom agents to extend the toolkit with your own specialized expertise:
+
 ## 📋 Attribution
 
-**All agents** are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. These templates provide expert agents for various domains and workflows with proven patterns for specialized task execution.
+**Included agents** are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. These templates provide expert agents for various domains and workflows with proven patterns for specialized task execution.
+
+**Custom agents** can be added following the same structure and patterns.
 
 ## How to Create an Agent
 
