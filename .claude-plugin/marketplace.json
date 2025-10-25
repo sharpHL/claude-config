@@ -1,0 +1,24 @@
+{
+  "name": "claude-config-marketplace",
+  "displayName": "Claude Config Marketplace",
+  "description": "Curated collection of Claude Code plugins, commands, and best practices",
+  "author": "sharp.L",
+  "repository": "https://github.com/sharpHL/claude-config",
+  "plugins": [
+    {
+      "name": "claude-config",
+      "displayName": "Claude Code Toolkit",
+      "description": "Comprehensive toolkit with Git Flow commands, agents, and development utilities",
+      "version": "1.0.0",
+      "source": ".",
+      "tags": [
+        "productivity",
+        "git-flow",
+        "templates",
+        "best-practices",
+        "utilities",
+        "automation"
+      ]
+    }
+  ]
+}
