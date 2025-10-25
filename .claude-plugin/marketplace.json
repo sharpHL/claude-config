@@ -1,8 +1,9 @@
 {
-  "name": "claude-config-marketplace",
+  "name": "claude-config",
   "owner": {
     "name": "sharp.L",
-    "email": "[email protected]"
+    "email": "sharpalgotrading@gmail.com",
+    "url": "https://github.com/sharpHL"
   },
   "metadata": {
     "description": "Curated collection of Claude Code plugins, commands, and best practices",
@@ -11,7 +12,7 @@
   "plugins": [
     {
       "name": "claude-config",
-      "source": ".",
+      "source": "./",
       "description": "Comprehensive toolkit with Git Flow commands, agents, and development utilities",
       "version": "1.0.0",
       "author": {
@@ -27,6 +28,14 @@
         "best-practices",
         "utilities",
         "automation"
+      ],
+      "strict": false,
+      "commands": [
+        "./commands/git/feature.md",
+        "./commands/git/release.md",
+        "./commands/git/hotfix.md",
+        "./commands/git/finish.md",
+        "./commands/git/flow-status.md"
       ]
     }
   ]
