@@ -66,11 +66,11 @@ This project follows the Git Flow branching model with the following structure:
   - Creates patch version tag (e.g., v1.2.0 → v1.2.1)
 
 **Available Commands:**
-- `/feature <name>` - Create new feature branch from develop
-- `/release <version>` - Create new release branch from develop
-- `/hotfix <name>` - Create emergency hotfix branch from main
-- `/finish` - Complete and merge current Git Flow branch
-- `/flow-status` - Display comprehensive Git Flow status
+- `/git/feature <name>` - Create new feature branch from develop
+- `/git/release <version>` - Create new release branch from develop
+- `/git/hotfix <name>` - Create emergency hotfix branch from main
+- `/git/finish` - Complete and merge current Git Flow branch
+- `/git/flow-status` - Display comprehensive Git Flow status
 
 **Commit Message Format:**
 Use conventional commits format:
@@ -96,7 +96,7 @@ Use conventional commits format:
 - Never commit directly to `main` or `develop`
 - Update CHANGELOG.md for releases
 - Create tags for all releases and hotfixes
-- Use `/finish` command for proper merge and cleanup
+- Use `/git/finish` command for proper merge and cleanup
 
 ## 🧪 Testing
 - Write tests for all new features
