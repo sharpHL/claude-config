@@ -14,7 +14,9 @@
       "source": ".",
       "description": "Comprehensive toolkit with Git Flow commands, agents, and development utilities",
       "version": "1.0.0",
-      "author": "sharp.L",
+      "author": {
+        "name": "sharp.L"
+      },
       "repository": "https://github.com/sharpHL/claude-config",
       "homepage": "https://github.com/sharpHL/claude-config#readme",
       "license": "MIT",
