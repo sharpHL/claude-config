@@ -54,11 +54,17 @@ cd cc-toolkit
 
 ### Slash Commands (`/commands`)
 Custom commands for streamlined workflows:
-- Code quality and refactoring tools
-- Testing and debugging utilities
-- Documentation generators
-- Performance optimization helpers
-- *(Add your own commands!)*
+
+**Git Flow Commands** (`/commands/git/`):
+- `/feature <name>` - Create feature branches from develop
+- `/release <version>` - Create release branches with versioning
+- `/hotfix <name>` - Create emergency hotfix branches from main
+- `/finish` - Complete and merge Git Flow branches
+- `/flow-status` - Display comprehensive Git Flow status
+
+*Source: [claude-code-templates](https://github.com/davila7/claude-code-templates) by @davila7 (MIT License)*
+
+*(Add your own commands!)*
 
 ### Agents (`/agents`)
 Specialized sub-agents for focused tasks:
@@ -198,6 +204,10 @@ MIT License - See [LICENSE](LICENSE) for details.
 ## 🙏 Acknowledgments
 
 Built with ❤️ for the Claude Code community.
+
+### Special Thanks
+
+- **Git Flow Commands**: The comprehensive Git Flow slash commands (`/feature`, `/release`, `/hotfix`, `/finish`, `/flow-status`) are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. These commands provide a robust Git Flow workflow implementation for Claude Code.
 
 ---
 
