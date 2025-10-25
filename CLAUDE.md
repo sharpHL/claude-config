@@ -35,6 +35,7 @@ This applies to:
 - **Length**: Maximum line length of 100 characters
 - **Types**: Always use type hints in Python code
 - **Standards**: Follow language-specific best practices
+- **Content Generation**: Generate minimal, accurate content; all generated content is technical debt
 
 ## 🔄 Git Workflow
 
