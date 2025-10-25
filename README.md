@@ -1,146 +1,204 @@
-# Claude Code Configuration
+# Claude Code Toolkit
 
-Personal configuration and preferences for [Claude Code](https://claude.com/claude-code).
+A curated collection of [Claude Code](https://claude.com/claude-code) commands, agents, skills, and best practices to supercharge your development workflow.
 
-## Features
+## ✨ Features
 
-- **User-level preferences** - English-only responses, Python tooling with `uv`
-- **Code style standards** - Type hints, 100-char limit, explicit naming
-- **Git workflow** - Conventional commits, testing requirements
-- **Custom commands** - Reusable slash commands (coming soon)
+- **Slash Commands** - Reusable prompts for common development tasks
+- **Specialized Agents** - Expert agents for specific domains and workflows
+- **Skills** - Modular capabilities that can be invoked on-demand
+- **Hooks** - Automation for repetitive tasks and workflows
+- **Templates** - Project configuration templates (CLAUDE.md)
+- **Best Practices** - Curated guides and tips for Claude Code mastery
+- **Examples** - Real-world usage demonstrations
 
-## Quick Start
+## 🚀 Quick Start
 
-### Option 1: Symbolic Links (Recommended)
+### Installation
+
+Install the plugin using Claude Code's plugin system:
+
+```bash
+# Add the plugin marketplace (if using GitHub)
+# In Claude Code settings or via command
+/plugin add-marketplace https://github.com/sharpHL/claude-config
+
+# Install the toolkit
+/plugin install cc-toolkit
+```
+
+### Local Development/Testing
+
+For local testing or customization:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/claude-config.git
-cd claude-config
+git clone https://github.com/sharpHL/claude-config.git
+cd cc-toolkit
 
-# Backup existing configuration
-mv ~/.claude/CLAUDE.md ~/.claude/CLAUDE.md.backup
+# Add as local marketplace in Claude Code settings.json
+{
+  "pluginMarketplaces": [
+    {
+      "name": "local",
+      "url": "file:///path/to/cc-toolkit/parent"
+    }
+  ]
+}
 
-# Create symbolic link
-ln -sf $(pwd)/CLAUDE.md ~/.claude/CLAUDE.md
-
-# Restart Claude Code
+# Install from local marketplace
+/plugin install cc-toolkit@local
 ```
 
-### Option 2: Direct Copy
+## 📦 What's Included
 
+### Slash Commands (`/commands`)
+Custom commands for streamlined workflows:
+- Code quality and refactoring tools
+- Testing and debugging utilities
+- Documentation generators
+- Performance optimization helpers
+- *(Add your own commands!)*
+
+### Agents (`/agents`)
+Specialized sub-agents for focused tasks:
+- Code review and analysis agents
+- Security audit specialists
+- Performance optimization experts
+- *(Extend with domain-specific agents!)*
+
+### Skills (`/skills`)
+Modular capabilities:
+- Framework-specific helpers
+- Language tooling integration
+- Development workflow utilities
+- *(Create reusable skills!)*
+
+### Hooks (`/hooks`)
+Automated workflows:
+- Pre-commit checks
+- Test automation
+- Build and deployment helpers
+- *(Automate repetitive tasks!)*
+
+### Templates (`/templates`)
+Project configuration templates:
+- `CLAUDE.md` - Project-level preferences and standards
+- Language-specific configurations
+- Framework boilerplates
+
+### Documentation (`/docs`)
+- **Best Practices** - How to get the most from Claude Code
+- **Tips & Tricks** - Productivity hacks and shortcuts
+- **Guides** - Deep dives into specific topics
+
+## 🎯 Usage Examples
+
+### Using Slash Commands
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/claude-config.git
+# List available commands
+/help
 
-# Copy configuration files
-cp claude-config/CLAUDE.md ~/.claude/
-
-# Restart Claude Code
+# Use a custom command from this toolkit
+/your-custom-command [parameters]
 ```
 
-### Option 3: Make ~/.claude a Git Repo
+### Invoking Agents
+Claude Code will automatically suggest relevant agents, or you can explicitly request them:
+```
+"Use the security-audit agent to review this authentication code"
+```
 
+### Applying Templates
+Copy templates to your project:
 ```bash
-# Navigate to Claude directory
-cd ~/.claude
-
-# Initialize git (if not already a repo)
-git init
-
-# Add remote
-git remote add origin https://github.com/yourusername/claude-config.git
-
-# Pull configuration
-git pull origin main
-
-# Only track safe files (see .gitignore)
-git add CLAUDE.md settings.json
-git commit -m "feat: sync configuration"
+cp ~/.claude/plugins/cc-toolkit/templates/CLAUDE.md ./.claude/
 ```
 
-## Repository Structure
+## 🛠️ Customization
 
-```
-claude-config/
-├── README.md           # This file
-├── .gitignore         # Security rules - prevents committing sensitive data
-├── CLAUDE.md          # User-level preferences and coding standards
-├── commands/          # Custom slash commands (optional)
-└── hooks/             # Custom hooks (optional)
-```
+### Adding Your Own Commands
 
-## Configuration Files
+1. Create a new file in `commands/`:
+```markdown
+---
+description: Your command description
+tags: [tag1, tag2]
+---
 
-### CLAUDE.md
-User-level preferences that apply to all Claude Code sessions:
-- Language requirements (English-only)
-- Python tooling preferences (`uv` over `pip`)
-- Code style standards
-- Git workflow conventions
-- Testing and documentation requirements
-- Response style preferences
-
-### settings.json (Optional)
-Claude Code editor and tool settings. Review for personal paths before committing.
-
-## Syncing Changes
-
-### From This Repo to Your Machine
-
-```bash
-cd ~/claude-config  # or wherever you cloned it
-git pull
-cp CLAUDE.md ~/.claude/  # if not using symlinks
+Your command prompt here...
 ```
 
-### From Your Machine to This Repo
+2. Test locally before publishing
 
-```bash
-cd ~/claude-config
-cp ~/.claude/CLAUDE.md .
-git add CLAUDE.md
-git commit -m "chore: update preferences"
-git push
+### Creating Custom Agents
+
+1. Add to `agents/` directory:
+```markdown
+---
+name: my-agent
+description: What your agent does
+tools: [Read, Write, Grep]
+tags: [domain, specialty]
+---
+
+Agent instructions and behavior...
 ```
 
-## Security Notes
+2. Document capabilities and usage
 
-⚠️ **NEVER commit these files** (already in `.gitignore`):
-- `history.jsonl` - Your chat history
-- `debug/` - Debug logs
-- `projects/` - Project-specific data
-- `todos/` - Task lists
-- `shell-snapshots/` - Shell command history
+## 📂 Repository Structure
 
-✅ **Safe to commit**:
-- `CLAUDE.md` - Your preferences
-- `settings.json` - After reviewing for personal paths
-- Custom commands and hooks (if no secrets)
+```
+cc-toolkit/
+├── .claude-plugin/
+│   └── plugin.json          # Plugin manifest
+├── commands/                # Slash commands
+├── agents/                  # Specialized agents
+├── skills/                  # Modular skills
+├── hooks/                   # Automation hooks
+├── templates/               # Configuration templates
+│   └── CLAUDE.md           # Project template
+├── examples/                # Usage examples
+├── docs/                    # Documentation
+│   ├── best-practices.md
+│   └── tips-and-tricks.md
+├── README.md               # This file
+├── CLAUDE.md               # This plugin's config
+├── CONTRIBUTING.md         # Contribution guide
+├── CHANGELOG.md           # Version history
+└── LICENSE                # MIT License
+```
 
-## Customization
+## 🤝 Contributing
 
-Feel free to fork and modify for your needs:
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for:
+- How to submit commands and agents
+- Code style guidelines
+- Testing procedures
+- Pull request process
 
-1. Edit `CLAUDE.md` to match your preferences
-2. Add custom slash commands in `commands/`
-3. Create hooks in `hooks/` for automation
-4. Share your setup with others!
+**Quick contribution checklist:**
+- [ ] Test your changes locally
+- [ ] Follow existing format and style
+- [ ] Update documentation
+- [ ] Add examples if applicable
 
-## Version History
-
-- **v1.0.0** - Initial configuration with core preferences
-
-## Resources
+## 📖 Resources
 
 - [Claude Code Documentation](https://docs.claude.com/claude-code)
-- [Conventional Commits](https://www.conventionalcommits.org/)
-- [uv - Python Package Manager](https://github.com/astral-sh/uv)
+- [Plugin Development Guide](https://docs.claude.com/en/docs/claude-code/plugins)
+- [Sub-agents Documentation](https://docs.claude.com/en/docs/claude-code/sub-agents)
+- [Slash Commands Guide](https://docs.claude.com/en/docs/claude-code/slash-commands)
 
-## License
+## 📄 License
 
-MIT License - Feel free to use and adapt!
+MIT License - See [LICENSE](LICENSE) for details.
+
+## 🙏 Acknowledgments
+
+Built with ❤️ for the Claude Code community.
 
 ---
 
-**Note**: This is a personal configuration repository. Adapt it to your workflow and preferences!
+**Questions or Issues?** Open an issue on [GitHub](https://github.com/sharpHL/claude-config/issues)
