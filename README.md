@@ -52,51 +52,62 @@ cd claude-config
 
 ## 📦 What's Included
 
+### 🚀 **Currently Available**
+- **5 Git Flow Commands** - Complete branching workflow automation
+- **18 Specialized Agents** - Data & AI, Podcast Creation, Programming experts
+- **Project Template** - Comprehensive CLAUDE.md with development best practices
+- **Documentation** - Best practices, tips, and examples
+
+### 🚧 **Coming Soon**
+- **Skills** - Modular capabilities for specific tasks
+- **Hooks** - Automation for repetitive workflows
+- **More Templates** - Language-specific configurations
+- **Extended Commands** - Beyond Git Flow workflows
+
 ### Slash Commands (`/commands`)
 Custom commands for streamlined workflows:
 
 **Git Flow Commands** (`/commands/git/`):
-- `/feature <name>` - Create feature branches from develop
-- `/release <version>` - Create release branches with versioning
-- `/hotfix <name>` - Create emergency hotfix branches from main
-- `/finish` - Complete and merge Git Flow branches
-- `/flow-status` - Display comprehensive Git Flow status
-
-*Source: [claude-code-templates](https://github.com/davila7/claude-code-templates) by @davila7 (MIT License)*
+- Complete branching workflow automation
+- See `/commands/README.md` for detailed usage and attribution
 
 *(Add your own commands!)*
 
 ### Agents (`/agents`)
 Specialized sub-agents for focused tasks:
-- Code review and analysis agents
-- Security audit specialists
-- Performance optimization experts
-- *(Extend with domain-specific agents!)*
+
+- **18 Expert Agents** across 3 categories
+- **Data & AI**: Quant analysis, AI engineering, data science
+- **Podcast Creation**: Research, production, marketing team
+- **Programming**: Python, TypeScript, Shell scripting experts
+
+*See `/agents/README.md` for complete list and attribution*
 
 ### Skills (`/skills`)
-Modular capabilities:
+Modular capabilities (framework for future extensions):
 - Framework-specific helpers
 - Language tooling integration
 - Development workflow utilities
-- *(Create reusable skills!)*
+- *(Coming soon: Create reusable skills!)*
 
 ### Hooks (`/hooks`)
-Automated workflows:
+Automated workflows (framework for future extensions):
 - Pre-commit checks
 - Test automation
 - Build and deployment helpers
-- *(Automate repetitive tasks!)*
+- *(Coming soon: Automate repetitive tasks!)*
 
 ### Templates (`/templates`)
 Project configuration templates:
-- `CLAUDE.md` - Project-level preferences and standards
-- Language-specific configurations
-- Framework boilerplates
+- `CLAUDE.md` - Comprehensive project template with Python, Git Flow, and development best practices
+- Language-specific configurations *(coming soon)*
+- Framework boilerplates *(coming soon)*
 
 ### Documentation (`/docs`)
-- **Best Practices** - How to get the most from Claude Code
+- **Best Practices** - Development workflow guidelines and tips
 - **Tips & Tricks** - Productivity hacks and shortcuts
-- **Guides** - Deep dives into specific topics
+- **Examples** - Usage examples and demonstrations
+- *(Coming soon: In-depth guides)*
 
 ## 🎯 Usage Examples
 
@@ -118,6 +129,10 @@ Claude Code will automatically suggest relevant agents, or you can explicitly re
 ### Applying Templates
 Copy templates to your project:
 ```bash
+# For local installation
+cp templates/CLAUDE.md ./.claude/
+
+# For plugin installation
 cp ~/.claude/plugins/claude-config/templates/CLAUDE.md ./.claude/
 ```
 
@@ -158,19 +173,23 @@ Agent instructions and behavior...
 ```
 claude-config/
 ├── .claude-plugin/
-│   └── plugin.json          # Plugin manifest
-├── commands/                # Slash commands
-├── agents/                  # Specialized agents
-├── skills/                  # Modular skills
-├── hooks/                   # Automation hooks
-├── templates/               # Configuration templates
+│   └── marketplace.json    # Plugin manifest
+├── commands/                # ✅ Slash commands (Git Flow)
+├── agents/                  # ✅ Specialized agents (18 total)
+│   ├── data-ai/            # Data & AI specialists
+│   ├── podcast-creator-team/ # Podcast production team
+│   └── programming-languages/ # Language experts
+├── skills/                  # 🚧 Modular skills (framework)
+├── hooks/                   # 🚧 Automation hooks (framework)
+├── templates/               # ✅ Configuration templates
 │   └── CLAUDE.md           # Project template
-├── examples/                # Usage examples
-├── docs/                    # Documentation
+├── examples/                # 📋 Usage examples (README)
+├── docs/                    # ✅ Documentation
 │   ├── best-practices.md
-│   └── tips-and-tricks.md
+│   ├── tips-and-tricks.md
+│   └── examples.md
 ├── README.md               # This file
-├── CLAUDE.md               # This plugin's config
+├── CLAUDE.md               # Project configuration
 ├── CONTRIBUTING.md         # Contribution guide
 ├── CHANGELOG.md           # Version history
 └── LICENSE                # MIT License
@@ -207,7 +226,7 @@ Built with ❤️ for the Claude Code community.
 
 ### Special Thanks
 
-- **Git Flow Commands**: The comprehensive Git Flow slash commands (`/feature`, `/release`, `/hotfix`, `/finish`, `/flow-status`) are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. These commands provide a robust Git Flow workflow implementation for Claude Code.
+This toolkit builds upon excellent open-source foundations. See individual directories for specific attributions to contributors and source projects.
 
 ---
 

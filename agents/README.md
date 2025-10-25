@@ -1,10 +1,65 @@
 # Agents Directory
 
-Add your specialized agents here.
+Specialized agents for focused tasks and domain-specific expertise.
 
-## Attribution
+## 🚀 Available Agents
 
-The agents in this directory are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. These templates provide expert agents for various domains and workflows.
+### 📊 Data & AI Agents (`data-ai/`)
+
+- **`quant-analyst`** - Quantitative finance and algorithmic trading specialist
+  - Trading strategy development and backtesting
+  - Risk metrics and portfolio optimization
+  - Time series analysis and forecasting
+
+- **`ai-engineer`** - AI/ML implementation and deployment expert
+  - Model deployment and MLOps workflows
+  - Infrastructure scaling and optimization
+  - Production AI system architecture
+
+- **`data-scientist`** - Data analysis and modeling specialist
+  - Statistical analysis and data visualization
+  - Machine learning model development
+  - Data pipeline creation and validation
+
+### 🎙️ Podcast Creation Team (`podcast-creator-team/`)
+
+**Core Production Team:**
+- **`comprehensive-researcher`** - Deep research and content analysis
+- **`episode-orchestrator`** - Podcast episode planning and coordination
+- **`project-supervisor-orchestrator`** - Overall project management
+
+**Content & Marketing:**
+- **`social-media-copywriter`** - Social media content creation
+- **`market-research-analyst`** - Market trends and audience analysis
+- **`podcast-trend-scout`** - Emerging trends identification
+- **`seo-podcast-optimizer`** - SEO optimization for podcast content
+
+**Specialized Experts:**
+- **`academic-research-synthesizer`** - Academic research integration
+- **`guest-outreach-coordinator`** - Guest booking and coordination
+- **`twitter-ai-influencer-manager`** - Social media influencer strategy
+- **`podcast-editor`** - Content editing and quality control
+
+### 💻 Programming Language Experts (`programming-languages/`)
+
+- **`python-pro`** - Python development expert
+  - Advanced Python patterns and best practices
+  - Package management and virtual environments
+  - Performance optimization and debugging
+
+- **`typescript-pro`** - TypeScript and JavaScript specialist
+  - Type-safe development patterns
+  - Modern JavaScript/TypeScript features
+  - Framework integration and architecture
+
+- **`shell-scripting-pro`** - Bash and shell scripting expert
+  - Advanced shell scripting techniques
+  - System administration automation
+  - DevOps pipeline scripting
+
+## 📋 Attribution
+
+**All agents** are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. These templates provide expert agents for various domains and workflows with proven patterns for specialized task execution.
 
 ## How to Create an Agent
 

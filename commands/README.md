@@ -2,15 +2,52 @@
 
 This directory contains custom slash commands for Claude Code.
 
-## Usage
+## 🚀 Available Commands
 
-Place your custom command files here (`.md` format) and they'll be available in Claude Code as `/command-name`.
+### Git Flow Commands (`git/`)
 
-## Example
+Complete Git Flow workflow automation commands:
 
+- `/feature <name>` - Create feature branches from develop
+- `/release <version>` - Create release branches with versioning
+- `/hotfix <name>` - Create emergency hotfix branches from main
+- `/finish` - Complete and merge Git Flow branches
+- `/flow-status` - Display comprehensive Git Flow status
+
+**Usage Example:**
+```bash
+/feature user-authentication
+/finish
+/flow-status
+```
+
+## 📋 Attribution
+
+**Git Flow Commands**: These comprehensive Git Flow slash commands are adapted from [claude-code-templates](https://github.com/davila7/claude-code-templates) by [@davila7](https://github.com/davila7), licensed under the MIT License. They provide a robust Git Flow workflow implementation for Claude Code.
+
+## ➕ Adding Your Own Commands
+
+### Command Structure
+Create a new `.md` file in this directory:
+
+```markdown
+---
+description: Your command description
+tags: [tag1, tag2]
+---
+
+Your command prompt here...
+```
+
+### Example
 Create a file `commands/review.md`:
 
 ```markdown
+---
+description: Review code changes for quality and best practices
+tags: [review, code-quality]
+---
+
 Review the current code changes and provide feedback on:
 - Code quality and best practices
 - Potential bugs or issues
@@ -23,3 +60,4 @@ Then use it in Claude Code: `/review`
 ## Resources
 
 - [Claude Code Documentation - Custom Commands](https://docs.claude.com/claude-code)
+- [Git Flow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
