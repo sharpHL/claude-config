@@ -37,16 +37,66 @@ This applies to:
 - **Standards**: Follow language-specific best practices
 
 ## 🔄 Git Workflow
-- **Commit Messages**: Use conventional commits format
-  - `feat:` - New features
-  - `fix:` - Bug fixes
-  - `docs:` - Documentation changes
-  - `refactor:` - Code refactoring
-  - `test:` - Test additions/changes
-  - `chore:` - Maintenance tasks
-- **Branching**: Create feature branches from `main`/`master`
-- **Quality**: Always run tests before committing
-- **Tools**: Prefer Git CLI over GUI tools
+
+### Git Flow Strategy
+This project follows the Git Flow branching model with the following structure:
+
+**Main Branches:**
+- `main` - Production-ready code (protected, tagged releases)
+- `develop` - Integration branch for features (protected)
+
+**Supporting Branches:**
+- `feature/*` - New features and enhancements
+  - Branch from: `develop`
+  - Merge back to: `develop`
+  - Naming: `feature/<descriptive-name>` (kebab-case)
+  - Examples: `feature/user-authentication`, `feature/payment-gateway`
+
+- `release/*` - Release preparation
+  - Branch from: `develop`
+  - Merge to: `main` AND `develop`
+  - Naming: `release/<version>` (e.g., `release/v1.2.0`)
+  - Creates version tag on `main`
+
+- `hotfix/*` - Emergency production fixes
+  - Branch from: `main`
+  - Merge to: `main` AND `develop`
+  - Naming: `hotfix/<descriptive-name>` (kebab-case)
+  - Examples: `hotfix/critical-security-patch`, `hotfix/payment-failure`
+  - Creates patch version tag (e.g., v1.2.0 → v1.2.1)
+
+**Available Commands:**
+- `/feature <name>` - Create new feature branch from develop
+- `/release <version>` - Create new release branch from develop
+- `/hotfix <name>` - Create emergency hotfix branch from main
+- `/finish` - Complete and merge current Git Flow branch
+- `/flow-status` - Display comprehensive Git Flow status
+
+**Commit Message Format:**
+Use conventional commits format:
+- `feat:` - New features
+- `fix:` - Bug fixes
+- `docs:` - Documentation changes
+- `refactor:` - Code refactoring
+- `test:` - Test additions/changes
+- `chore:` - Maintenance tasks
+- `perf:` - Performance improvements
+
+**Branch Naming Rules:**
+- Use kebab-case (lowercase-with-hyphens)
+- Be descriptive and concise
+- Avoid generic names like `feature1`, `fix`, `update`
+- ✅ Good: `feature/user-profile-page`, `hotfix/auth-bypass-fix`
+- ❌ Bad: `feat1`, `My_Feature`, `fix`
+
+**Workflow Best Practices:**
+- Keep feature branches short-lived and focused
+- Push to remote regularly to avoid conflicts
+- Run tests before finishing branches
+- Never commit directly to `main` or `develop`
+- Update CHANGELOG.md for releases
+- Create tags for all releases and hotfixes
+- Use `/finish` command for proper merge and cleanup
 
 ## 🧪 Testing
 - Write tests for all new features
