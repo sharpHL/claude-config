@@ -10,18 +10,14 @@ This applies to:
 - Output results and error messages
 - Git commit messages
 
-## 🐍 Python Development
-**CRITICAL REQUIREMENT**: Use `uv` for all Python-related tasks instead of `pip`, `venv`, or other traditional tools.
+## 📝 Toolkit Development
+**Note**: This is a Claude Code plugin toolkit containing Markdown-based commands and agents. No traditional programming language tooling is required for contributing.
 
-`uv` handles:
-- Python version management
-- Package management
-- Project initialization and management
-- Virtual environment creation
-
-**Tools:**
-- Linting: `ruff`
-- Formatting: `black` or `ruff format`
+**When contributing agents or commands:**
+- Follow existing Markdown formatting
+- Include proper frontmatter metadata
+- Test locally before submitting
+- Update marketplace.json with new entries
 
 ## 📁 Project Organization
 - Prefer flat directory structures over deeply nested hierarchies
@@ -39,7 +35,9 @@ This applies to:
 
 ## 🔄 Git Workflow
 
-This project follows Git Flow branching model with automated commands.
+**Note**: This section documents the Git Flow commands provided by this toolkit for use in other projects. This toolkit repository itself uses a simplified workflow with `main` branch.
+
+**For projects using the Git Flow commands:**
 
 **Core Commands:**
 - `/git:feature <name>` - Create feature branch from develop
@@ -47,6 +45,7 @@ This project follows Git Flow branching model with automated commands.
 - `/git:hotfix <name>` - Create hotfix branch from main
 - `/git:finish` - Complete and merge current branch
 - `/git:flow-status` - Check repository status
+- `/git:branch <description>` - Generate Git Flow compliant branch names
 
 **Branch Structure:**
 - `main` - Production-ready code (protected)
@@ -67,11 +66,17 @@ This project follows Git Flow branching model with automated commands.
 - Keep branches focused and short-lived
 - Test before finishing branches
 
-## 🧪 Testing
+## 🧪 Testing (For Projects Using This Toolkit)
+**Recommended testing practices for projects that use these commands/agents:**
 - Write tests for new features (minimum 80% coverage)
-- Use `pytest` for Python projects
+- Use `pytest` for Python projects, Jest for JavaScript/TypeScript
 - Run full test suite before committing
 - Include both unit and integration tests
+
+**For this toolkit itself:**
+- Test commands locally by installing as local plugin
+- Verify agents work as documented
+- Check markdown syntax and frontmatter
 
 ## 📚 Documentation
 - Add docstrings to public functions and classes

@@ -13,7 +13,7 @@
     {
       "name": "claude-config",
       "source": "./",
-      "description": "Extensible toolkit with 18 specialized agents, Git Flow commands, and development workflows",
+      "description": "Extensible toolkit with 17 specialized agents, Git Flow commands, and development workflows",
       "version": "1.0.0",
       "author": {
         "name": "sharp.L"

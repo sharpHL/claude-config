@@ -53,8 +53,8 @@ cd claude-config
 ## 📦 What's Included
 
 ### 🚀 **Currently Available**
-- **5 Git Flow Commands** - Complete branching workflow automation
-- **18 Specialized Agents** - Data & AI, Podcast Creation, Programming experts
+- **6 Git Flow Commands** - Complete branching workflow automation
+- **17 Specialized Agents** - Data & AI, Podcast Creation, Programming experts
 - **Project Template** - Comprehensive CLAUDE.md with development best practices
 - **Documentation** - Best practices, tips, and examples
 
@@ -87,7 +87,7 @@ Custom commands for streamlined workflows:
 Specialized sub-agents for focused tasks:
 
 **Included Agents**:
-- **18 Expert Agents** across 3 categories
+- **17 Expert Agents** across 3 categories
 - **Data & AI**: Quant analysis, AI engineering, data science
 - **Podcast Creation**: Research, production, marketing team
 - **Programming**: Python, TypeScript, Shell scripting experts
@@ -205,8 +205,7 @@ claude-config/
 ├── examples/                # 📋 Usage examples (README)
 ├── docs/                    # ✅ Documentation
 │   ├── best-practices.md
-│   ├── tips-and-tricks.md
-│   └── examples.md
+│   └── tips-and-tricks.md
 ├── README.md               # This file
 ├── CLAUDE.md               # Project configuration
 ├── CONTRIBUTING.md         # Contribution guide
