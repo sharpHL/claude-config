@@ -1,45 +1,18 @@
 {
   "name": "claude-config",
   "owner": {
-    "name": "sharp.L",
+    "name": "sharp",
     "email": "sharpalgotrading@gmail.com",
     "url": "https://github.com/sharpHL"
   },
   "metadata": {
-    "description": "Comprehensive Claude Code toolkit with specialized agents, Git Flow commands, MCP integration, and development utilities",
+    "description": "Personal Claude Code configuration toolkit with specialized agents, Git Flow commands, and development workflows",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "claude-config",
-      "source": "./",
-      "description": "Extensible toolkit with 17 specialized agents, Git Flow commands, and development workflows",
-      "version": "1.0.0",
-      "author": {
-        "name": "sharp.L"
-      },
-      "repository": "https://github.com/sharpHL/claude-config",
-      "homepage": "https://github.com/sharpHL/claude-config#readme",
-      "license": "MIT",
-      "keywords": [
-        "agents",
-        "productivity",
-        "git-flow",
-        "automation",
-        "data-science",
-        "podcast-creation",
-        "programming-languages",
-        "ai-engineering",
-        "development-workflow",
-        "extensible-toolkit",
-        "mcp",
-        "context7",
-        "chrome-devtools",
-        "sequential-thinking",
-        "browser-automation",
-        "context-management"
-      ],
-      "strict": false,
+      "description": "Comprehensive toolkit with 17 specialized agents, Git Flow commands, MCP integration, and development utilities",
       "commands": [
         "./commands/git/feature.md",
         "./commands/git/release.md",
@@ -67,49 +40,11 @@
         "./agents/programming-languages/typescript-pro.md",
         "./agents/programming-languages/shell-scripting-pro.md"
       ],
-      "templates": [
-        "./templates/CLAUDE.md"
-      ],
-      "mcp": {
-        "type": "integrated_enhancement",
-        "description": "Integrated MCP servers for enhanced capabilities",
-        "config": "./mcp-servers/.mcp.json",
-        "auto_install": true,
-        "user_installation_required": false,
-        "package_based": true,
-        "servers": {
-          "context7": {
-            "name": "Context7",
-            "description": "Enhanced context management and information retrieval",
-            "package": "@context7/mcp-server",
-            "transport": "stdio",
-            "auto_configure": true,
-            "enhances": ["context awareness", "information retrieval"]
-          },
-          "chrome-devtools": {
-            "name": "Chrome DevTools",
-            "description": "Browser automation, debugging, and web scraping",
-            "package": "chrome-devtools-mcp",
-            "transport": "stdio",
-            "auto_configure": true,
-            "enhances": ["browser automation", "web debugging", "scraping"]
-          },
-          "sequential-thinking": {
-            "name": "Sequential Thinking",
-            "description": "Structured reasoning and step-by-step problem solving",
-            "package": "@modelcontextprotocol/server-sequential-thinking",
-            "transport": "stdio",
-            "auto_configure": true,
-            "enhances": ["structured reasoning", "problem decomposition"]
-          }
-        },
-        "installation_notes": [
-          "MCP servers are automatically configured via npm packages",
-          "No manual claude mcp add commands required",
-          "Packages are installed and configured automatically",
-          "Compatible with Claude Code's built-in MCP server detection"
-        ]
-      }
+        "mcpServers": [
+        "./mcp-servers/context7.json",
+        "./mcp-servers/chrome-devtools.json",
+        "./mcp-servers/sequential-thinking.json"
+      ]
     }
   ]
 }
