@@ -53,8 +53,8 @@ cd claude-config
 ## 📦 What's Included
 
 ### 🚀 **Currently Available**
-- **6 Git Flow Commands** - Complete branching workflow automation
-- **17 Specialized Agents** - Data & AI, Podcast Creation, Programming experts
+- **11 Workflow Commands** - Git Flow automation + daily workflow commands
+- **22 Specialized Agents** - Algorithm Engineering, Data & AI, Productivity, Podcast Creation, Programming experts
 - **Project Template** - Comprehensive CLAUDE.md with development best practices
 - **Documentation** - Best practices, tips, and examples
 
@@ -76,8 +76,16 @@ Model Context Protocol servers for enhanced capabilities:
 Custom commands for streamlined workflows:
 
 **Git Flow Commands** (`/commands/git/`):
+- `/git:feature`, `/git:release`, `/git:hotfix`, `/git:finish`, `/git:flow-status`, `/git:branch`
 - Complete branching workflow automation
 - See `/commands/README.md` for detailed usage and attribution
+
+**Workflow Commands** (`/commands/workflow/`):
+- `/daily-market-brief` - Generate market analysis briefs (morning/midday/evening)
+- `/kb-sync` - Obsidian knowledge base maintenance and organization
+- `/intel-digest` - Process intelligence feeds from FOLO and RSS sources
+- `/research-summary` - Analyze and summarize AI/ML research papers
+- `/algo-benchmark` - Run comprehensive algorithm performance benchmarks
 
 **Custom Commands**:
 - Add your own commands to extend functionality
@@ -87,10 +95,18 @@ Custom commands for streamlined workflows:
 Specialized sub-agents for focused tasks:
 
 **Included Agents**:
-- **17 Expert Agents** across 3 categories
-- **Data & AI**: Quant analysis, AI engineering, data science
+- **22 Expert Agents** across 4 categories
+- **Data & AI**: Algorithm engineering, quant analysis, ETF market analysis, research digest, AI engineering, data science
+- **Productivity**: Knowledge curation (Obsidian), intelligence synthesis (FOLO)
 - **Podcast Creation**: Research, production, marketing team
 - **Programming**: Python, TypeScript, Shell scripting experts
+
+**Use Cases**:
+- 🧮 Algorithm development and optimization with complexity analysis
+- 📊 Daily market analysis and ETF trading insights
+- 📚 Knowledge base management with Obsidian
+- 🔍 Intelligence gathering and synthesis from multiple sources
+- 📄 Research paper analysis and summarization
 
 **Custom Agents**:
 - Create your own specialized agents
@@ -191,26 +207,29 @@ claude-config/
 ├── .claude-plugin/
 │   └── marketplace.json    # Plugin manifest
 ├── mcp-servers/            # 🔧 MCP server configurations
-│   ├── .mcp.json         # MCP server setup
-│   └── README.md          # MCP installation guide
-├── commands/                # ✅ Slash commands (Git Flow)
-├── agents/                  # ✅ Specialized agents (18 total)
-│   ├── data-ai/            # Data & AI specialists
-│   ├── podcast-creator-team/ # Podcast production team
-│   └── programming-languages/ # Language experts
-├── skills/                  # 🚧 Modular skills (framework)
-├── hooks/                   # 🚧 Automation hooks (framework)
-├── templates/               # ✅ Configuration templates
+│   ├── .mcp.json           # MCP server setup
+│   └── README.md           # MCP installation guide
+├── commands/               # ✅ Slash commands (11 total)
+│   ├── git/                # Git Flow commands (6)
+│   └── workflow/           # Daily workflow commands (5)
+├── agents/                 # ✅ Specialized agents (22 total)
+│   ├── data-ai/            # Data & AI specialists (6)
+│   ├── productivity/       # Productivity & knowledge (2)
+│   ├── podcast-creator-team/ # Podcast production team (11)
+│   └── programming-languages/ # Language experts (3)
+├── skills/                 # 🚧 Modular skills (framework)
+├── hooks/                  # 🚧 Automation hooks (framework)
+├── templates/              # ✅ Configuration templates
 │   └── CLAUDE.md           # Project template
-├── examples/                # 📋 Usage examples (README)
-├── docs/                    # ✅ Documentation
+├── examples/               # 📋 Usage examples (README)
+├── docs/                   # ✅ Documentation
 │   ├── best-practices.md
 │   └── tips-and-tricks.md
 ├── README.md               # This file
 ├── CLAUDE.md               # Project configuration
 ├── CONTRIBUTING.md         # Contribution guide
-├── CHANGELOG.md           # Version history
-└── LICENSE                # MIT License
+├── CHANGELOG.md            # Version history
+└── LICENSE                 # MIT License
 ```
 
 ## 🤝 Contributing
