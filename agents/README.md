@@ -8,10 +8,25 @@ Specialized agents for focused tasks and domain-specific expertise.
 
 #### 📊 Data & AI Agents (`data-ai/`)
 
+- **`algorithm-engineer`** - Algorithm design and optimization specialist
+  - Data structures and algorithm complexity analysis
+  - Performance profiling and optimization
+  - Competitive programming patterns
+
 - **`quant-analyst`** - Quantitative finance and algorithmic trading specialist
   - Trading strategy development and backtesting
   - Risk metrics and portfolio optimization
   - Time series analysis and forecasting
+
+- **`etf-market-analyst`** - ETF and market analysis specialist
+  - Technical analysis and market sentiment
+  - Daily market briefs (morning/midday/evening)
+  - Trading volumes and risk metrics
+
+- **`research-digest`** - AI/ML research paper analysis specialist
+  - Research paper summarization and insight extraction
+  - Literature review and citation analysis
+  - Practical implementation assessment
 
 - **`ai-engineer`** - AI/ML implementation and deployment expert
   - Model deployment and MLOps workflows
@@ -22,6 +37,18 @@ Specialized agents for focused tasks and domain-specific expertise.
   - Statistical analysis and data visualization
   - Machine learning model development
   - Data pipeline creation and validation
+
+#### 🎯 Productivity Agents (`productivity/`)
+
+- **`knowledge-curator`** - Obsidian knowledge base management specialist
+  - Note organization and knowledge graph building
+  - Link analysis and tag taxonomy
+  - PKM (Personal Knowledge Management) systems
+
+- **`intelligence-synthesizer`** - Intelligence gathering and synthesis specialist
+  - Multi-source information aggregation (FOLO, RSS feeds)
+  - Trend identification and signal detection
+  - Daily intelligence digests and reports
 
 ### 🎙️ Podcast Creation Team (`podcast-creator-team/`)
 
