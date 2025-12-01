@@ -5,23 +5,23 @@
   "plugins": [
     {
       "name": "common",
-      "source": "github:sharp/sharp-marketplace@main:common"
+      "source": "github:sharpHL/claude-config@main:common"
     },
     {
       "name": "research",
-      "source": "github:sharp/sharp-marketplace@main:research"
+      "source": "github:sharpHL/claude-config@main:research"
     },
     {
       "name": "trading",
-      "source": "github:sharp/sharp-marketplace@main:trading"
+      "source": "github:sharpHL/claude-config@main:trading"
     },
     {
       "name": "dev",
-      "source": "github:sharp/sharp-marketplace@main:dev"
+      "source": "github:sharpHL/claude-config@main:dev"
     },
     {
       "name": "devops",
-      "source": "github:sharp/sharp-marketplace@main:devops"
+      "source": "github:sharpHL/claude-config@main:devops"
     }
   ]
 }

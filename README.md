@@ -20,7 +20,7 @@ Personal Claude Code plugins for development, trading, and research.
 // .claude/settings.json
 {
   "extraKnownMarketplaces": [
-    "github:sharp/sharp-marketplace@main"
+    "github:sharpHL/claude-config@main"
   ]
 }
 ```
@@ -32,7 +32,7 @@ Personal Claude Code plugins for development, trading, and research.
 {
   "plugins": {
     "common": {
-      "source": "github:sharp/sharp-marketplace@main:common"
+      "source": "github:sharpHL/claude-config@main:common"
     }
   }
 }
