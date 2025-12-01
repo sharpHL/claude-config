@@ -1,0 +1,27 @@
+{
+  "name": "sharp-marketplace",
+  "owner": "sharp",
+  "description": "Personal Claude Code plugins for development, trading, and research",
+  "plugins": [
+    {
+      "name": "common",
+      "source": "github:sharp/sharp-marketplace@main:common"
+    },
+    {
+      "name": "research",
+      "source": "github:sharp/sharp-marketplace@main:research"
+    },
+    {
+      "name": "trading",
+      "source": "github:sharp/sharp-marketplace@main:trading"
+    },
+    {
+      "name": "dev",
+      "source": "github:sharp/sharp-marketplace@main:dev"
+    },
+    {
+      "name": "devops",
+      "source": "github:sharp/sharp-marketplace@main:devops"
+    }
+  ]
+}

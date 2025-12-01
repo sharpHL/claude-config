@@ -1,0 +1,6 @@
+{
+  "name": "devops",
+  "version": "0.1.0",
+  "description": "DevOps tools: Docker, CI/CD, deployment, monitoring",
+  "author": "sharp"
+}

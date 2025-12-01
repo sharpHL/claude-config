@@ -1,0 +1,6 @@
+{
+  "name": "trading",
+  "version": "0.1.0",
+  "description": "Quantitative trading: strategy, data, risk, deployment",
+  "author": "sharp"
+}
